@@ -1,0 +1,40 @@
+plugins {
+    id 'scala'
+}
+
+
+group 'IoT'
+version 'IoT-1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.12', version: '2.5.21'
+    testCompile group: 'org.scalatest', name: 'scalatest_2.12', version: '3.2.0-SNAP10'
+    testCompile group: 'com.typesafe.akka', name: 'akka-testkit_2.12', version: '2.5.21'
+    testCompile group: 'org.scalacheck', name: 'scalacheck_2.10', version: '1.11.3'
+}
+
+
+//dependencies {
+//    compile 'org.scala-lang:scala-compiler:2.5.21'
+//    compile('com.typesafe.akka:akka-cluster_2.12:2.5.21') {
+//        exclude group: 'org.scala-lang'
+//    }
+//    testCompile ('com.typesafe.akka:akka-testkit_2.12:2.5.21') {
+//        exclude group: 'org.scala-lang'
+//    }
+//    testCompile ('org.scalatest:scalatest_2.12:2.5.21') {
+//        exclude group: 'org.scala-lang'
+//    }
+//    testCompile ('org.specs2:specs2-core_2.12:2.5.21') {
+//        exclude group: 'org.scala-lang'
+//    }
+//    testCompile ('org.specs2:specs2-mock_2.12:2.5.21') {
+//        exclude group: 'org.scala-lang'
+//    }
+//}
