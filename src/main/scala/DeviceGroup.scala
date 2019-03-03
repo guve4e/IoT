@@ -1,5 +1,5 @@
 import DeviceGroup.{ReplyDeviceList, RequestAllTemperatures, RequestDeviceList}
-import DeviceManager.RequestTrackDevice
+import DeviceManager.RegisterDevice
 import akka.actor.{Actor, ActorLogging, ActorRef, Props, Terminated}
 
 import scala.concurrent.duration._
@@ -34,20 +34,20 @@ class DeviceGroup(groupId: String) extends Actor with ActorLogging {
 
   override def receive: Receive = {
     //#query-added
-    case trackMsg @ RequestTrackDevice(`groupId`, _) ⇒
+    case trackMsg @ RegisterDevice(`groupId`, _) ⇒
       deviceIdToActor.get(trackMsg.deviceId) match {
         case Some(ref) ⇒
           ref forward trackMsg
         case None ⇒
           log.info("Creating device actor for {}", trackMsg.deviceId)
-          val deviceActor = context.actorOf(Device.props(groupId, trackMsg.deviceId), "device-" + trackMsg.deviceId)
+          val deviceActor = context.actorOf(DeviceActor.props(groupId, trackMsg.deviceId), "device-" + trackMsg.deviceId)
           context.watch(deviceActor)
           deviceActor forward trackMsg
           deviceIdToActor += trackMsg.deviceId -> deviceActor
           actorToDeviceId += deviceActor -> trackMsg.deviceId
       }
 
-    case RequestTrackDevice(groupId, deviceId) ⇒
+    case RegisterDevice(groupId, deviceId) ⇒
       log.warning(
         "Ignoring TrackDevice request for {}. This actor is responsible for {}.",
         groupId, this.groupId

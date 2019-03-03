@@ -16,10 +16,10 @@ object DeviceGroupQuery {
 }
 
 class DeviceGroupQuery(
-                        actorToDeviceId: Map[ActorRef, String],
+                        actorToDeviceIds: Map[ActorRef, String],
                         requestId: Long,
                         requester: ActorRef,
-                        timeout:FiniteDuration
+                        timeout: FiniteDuration
                       )
   extends Actor with ActorLogging {
 
@@ -30,10 +30,10 @@ class DeviceGroupQuery(
     context.system.scheduler.scheduleOnce(timeout, self, CollectionTimeout)
 
   override def preStart(): Unit = {
-    actorToDeviceId.keysIterator.foreach {
+    actorToDeviceIds.keysIterator.foreach {
       deviceActor =>
         context.watch(deviceActor)
-        deviceActor ! Device.ReadTemperature(0)
+        deviceActor ! DeviceActor.ReadTemperature(0)
     }
   }
 
@@ -46,14 +46,14 @@ class DeviceGroupQuery(
   override def receive: Receive =
     waitingForReplies(
       Map.empty,
-      actorToDeviceId.keySet
+      actorToDeviceIds.keySet
     )
 
   def waitingForReplies(
                          repliesSoFar: Map[String, DeviceGroup.TemperatureReading],
                          stillWaiting: Set[ActorRef]
                        ): Receive = {
-    case Device.RespondTemperature(0, valueOption) =>
+    case DeviceActor.TemperatureRead(0, valueOption) =>
       val deviceActor = sender()
       val reading = valueOption match {
         case Some(value) => DeviceGroup.Temperature(value)
@@ -67,7 +67,7 @@ class DeviceGroupQuery(
     case CollectionTimeout =>
       val timedOutReplies =
         stillWaiting.map { deviceActor =>
-          val deviceId = actorToDeviceId(deviceActor)
+          val deviceId = actorToDeviceIds(deviceActor)
           deviceId -> DeviceGroup.DeviceTimedOut
         }
       requester ! DeviceGroup.RespondAllTemperatures(requestId, repliesSoFar ++ timedOutReplies)
@@ -83,7 +83,7 @@ class DeviceGroupQuery(
                         repliesSoFar: Map[String, DeviceGroup.TemperatureReading]
                       ): Unit = {
     context.unwatch(deviceActor)
-    val deviceId = actorToDeviceId(deviceActor)
+    val deviceId = actorToDeviceIds(deviceActor)
     val newStillWaiting = stillWaiting - deviceActor
 
     val newRepliesSoFar = repliesSoFar + (deviceId -> reading)

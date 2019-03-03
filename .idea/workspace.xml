@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcba9108-5c68-4e42-8905-f3169fefe5d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DeviceGroup.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DeviceGroupQuery.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DeviceManager.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/DeviceGroupQuerySpec.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/DeviceGroupSpec.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/scala/compilerAnalysis/compileScala.analysis" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/scala/compilerAnalysis/compileScala.analysis" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/scala/compilerAnalysis/compileScala.analysis.relations" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/scala/compilerAnalysis/compileScala.analysis.relations" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/scala/compilerAnalysis/compileTestScala.analysis" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/scala/compilerAnalysis/compileTestScala.analysis" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/scala/compilerAnalysis/compileTestScala.analysis.relations" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/scala/compilerAnalysis/compileTestScala.analysis.relations" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Device.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Device.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/DeviceSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/DeviceSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Device.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Device.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/DeviceActor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DeviceGroup.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/DeviceGroup.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DeviceGroupQuery.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/DeviceGroupQuery.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DeviceManager.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/DeviceManager.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/DeviceGroupQuerySpec.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/DeviceGroupQuerySpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/DeviceActorGroupQuerySpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/DeviceGroupSpec.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/DeviceGroupSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/DeviceActorGroupSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/DeviceSpec.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/DeviceSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/DeviceActorSpec.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -52,22 +44,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceGroupSpec.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="71" column="33" lean-forward="true" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/gradlew">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceGroupQuerySpec.scala">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceActorGroupQuerySpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="149" column="3" selection-start-line="149" selection-start-column="3" selection-end-line="149" selection-end-column="3" />
+            <state relative-caret-position="566">
+              <caret line="170" selection-start-line="170" selection-end-line="170" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -78,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceGroup.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
+            <state relative-caret-position="127">
               <caret line="55" column="24" lean-forward="true" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
               <folding>
                 <element signature="e#0#79#0" expanded="true" />
@@ -88,32 +73,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceGroupQuery.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="96" column="1" lean-forward="true" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
+            <state relative-caret-position="-366">
+              <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
               <folding>
                 <element signature="e#0#81#0" expanded="true" />
-                <element signature="e#778#803#0" expanded="true" />
+                <element signature="e#775#800#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.scala">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceActor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="2" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/Device.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            <state relative-caret-position="962">
+              <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -121,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceManager.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state relative-caret-position="748">
+              <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -130,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/IotApp.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="40" />
+            <state relative-caret-position="154">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -152,10 +133,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceSpec.scala">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceActorSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <state relative-caret-position="484">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="51" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -183,14 +164,15 @@
         <option value="$PROJECT_DIR$/src/main/scala/DeviceTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/DeviceTest.scala" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/scala/Device.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/DeviceSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/DeviceManager.scala" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/DeviceGroup.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/DeviceSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/DeviceGroupSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/DeviceGroupQuery.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/DeviceGroupQuerySpec.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DeviceGroup.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/DeviceGroupSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Device.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/DeviceActor.scala" />
       </list>
     </option>
   </component>
@@ -247,6 +229,36 @@
             </path>
             <path>
               <item name="IoT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="IoT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.typesafe.akka:akka-actor_2.12:2.5.21" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="IoT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.typesafe.akka:akka-actor_2.12:2.5.21" type="70bed36:NamedLibraryElementNode" />
+              <item name="akka-actor_2.12-2.5.21.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IoT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.typesafe.akka:akka-actor_2.12:2.5.21" type="70bed36:NamedLibraryElementNode" />
+              <item name="akka-actor_2.12-2.5.21.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="akka" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IoT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.typesafe.akka:akka-actor_2.12:2.5.21" type="70bed36:NamedLibraryElementNode" />
+              <item name="akka-actor_2.12-2.5.21.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="akka" type="462c0819:PsiDirectoryNode" />
+              <item name="actor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IoT" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
@@ -264,7 +276,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551574346941" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551624462040" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Scala&#10;GenericSQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="ScalaTest" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.ScalaTest" value="org.scalatest.FunSuite" />
@@ -479,44 +491,44 @@
       <updated>1551546523412</updated>
       <workItem from="1551546534294" duration="6580000" />
       <workItem from="1551554298260" duration="5499000" />
-      <workItem from="1551561302281" duration="11498000" />
+      <workItem from="1551561302281" duration="20247000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DeviceGroupQuerySpec - 2019.03.02 at 19h 30m 36s.xml">
+    <history-entry file="ScalaTests_in_'scala' - 2019.03.02 at 20h 20m 05s.xml">
+      <configuration name="ScalaTests in 'scala'" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="DeviceGroupSpec - 2019.03.02 at 20h 29m 57s.xml">
+      <configuration name="DeviceGroupSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="DeviceGroupSpec - 2019.03.02 at 20h 32m 53s.xml">
+      <configuration name="DeviceGroupSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="DeviceGroupSpec - 2019.03.02 at 21h 19m 03s.xml">
+      <configuration name="DeviceGroupSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="DeviceGroupSpec - 2019.03.02 at 21h 22m 35s.xml">
+      <configuration name="DeviceGroupSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="DeviceGroupQuerySpec - 2019.03.02 at 21h 26m 59s.xml">
       <configuration name="DeviceGroupQuerySpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DeviceGroupQuerySpec - 2019.03.02 at 19h 30m 53s.xml">
-      <configuration name="DeviceGroupQuerySpec" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="ScalaTests_in_'scala' - 2019.03.02 at 22h 01m 31s.xml">
+      <configuration name="ScalaTests in 'scala'" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DeviceGroupSpec - 2019.03.02 at 19h 31m 24s.xml">
-      <configuration name="DeviceGroupSpec" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="ScalaTests_in_'scala' - 2019.03.02 at 22h 02m 27s.xml">
+      <configuration name="ScalaTests in 'scala'" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DeviceGroupSpec - 2019.03.02 at 19h 31m 47s.xml">
-      <configuration name="DeviceGroupSpec" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="ScalaTests_in_'scala' - 2019.03.02 at 22h 03m 06s.xml">
+      <configuration name="ScalaTests in 'scala'" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DeviceGroupSpec - 2019.03.02 at 19h 32m 04s.xml">
-      <configuration name="DeviceGroupSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="DeviceGroupSpec - 2019.03.02 at 19h 43m 48s.xml">
-      <configuration name="DeviceGroupSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="DeviceSpec - 2019.03.02 at 19h 44m 39s.xml">
-      <configuration name="DeviceSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="DeviceGroupSpec - 2019.03.02 at 19h 44m 58s.xml">
-      <configuration name="DeviceGroupSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="DeviceGroupQuerySpec - 2019.03.02 at 19h 45m 47s.xml">
-      <configuration name="DeviceGroupQuerySpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ScalaTests_in_'scala' - 2019.03.02 at 19h 47m 43s.xml">
+    <history-entry file="ScalaTests_in_'scala' - 2019.03.03 at 09h 39m 22s.xml">
       <configuration name="ScalaTests in 'scala'" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23577000" />
+    <option name="totallyTimeSpent" value="32326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1728" height="1127" extended-state="6" />
@@ -537,8 +549,8 @@
       <window_info anchor="bottom" id="Build" order="5" weight="0.2811245" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.22690763" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.26907632" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.23694779" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.18273093" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -554,7 +566,7 @@
       <window_info anchor="right" id="Commander" order="7" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.20179641" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.1017964" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -608,9 +620,6 @@
     <entry file="file://$PROJECT_DIR$/scala/build.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scalatest/scalatest_2.12/3.2.0-SNAP10/20f5c79db0dcfdec3ce73765ddf55eccb9b847c3/scalatest_2.12-3.2.0-SNAP10-sources.jar!/org/scalatest/TestSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -639,9 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -651,13 +657,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-actor_2.12/2.5.21/abe59a65f5d69430b52d9cf27df0d70d7f7d924b/akka-actor_2.12-2.5.21-sources.jar!/akka/actor/Actor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="516" column="4" selection-start-line="516" selection-start-column="4" selection-end-line="516" selection-end-column="4" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-actor_2.12/2.5.21/abe59a65f5d69430b52d9cf27df0d70d7f7d924b/akka-actor_2.12-2.5.21-sources.jar!/akka/actor/ActorCell.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -699,75 +698,60 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-1805">
           <caret selection-end-line="2" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceSpec.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceActorGroupSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="372">
+          <caret line="71" column="41" lean-forward="true" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-actor_2.12/2.5.21/abe59a65f5d69430b52d9cf27df0d70d7f7d924b/akka-actor_2.12-2.5.21-sources.jar!/akka/actor/Actor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="527" column="47" selection-start-line="527" selection-start-column="47" selection-end-line="527" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceActorSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="51" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceGroupSpec.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceActorGroupQuerySpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="71" column="33" lean-forward="true" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+        <state relative-caret-position="566">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/DeviceGroupQuerySpec.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/IotApp.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="149" column="3" selection-start-line="149" selection-start-column="3" selection-end-line="149" selection-end-column="3" />
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Device.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceGroup.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="55" column="24" lean-forward="true" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceGroupQuery.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="96" column="1" lean-forward="true" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#81#0" expanded="true" />
-            <element signature="e#778#803#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceManager.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -779,13 +763,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/IotApp.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceGroup.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="40" />
+        <state relative-caret-position="127">
+          <caret line="55" column="24" lean-forward="true" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#79#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceGroupQuery.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-366">
+          <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+            <element signature="e#775#800#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceManager.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/DeviceActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
         </state>
       </provider>
     </entry>

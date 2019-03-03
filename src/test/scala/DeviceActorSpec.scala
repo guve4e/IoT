@@ -3,7 +3,7 @@ import akka.testkit.{ImplicitSender, TestActors, TestKit, TestProbe}
 import org.scalatest.{BeforeAndAfterAll, Matchers, WordSpecLike}
 import scala.concurrent.duration._
 
-class DeviceSpec() extends TestKit(ActorSystem("iot-system"))
+class DeviceActorSpec() extends TestKit(ActorSystem("iot-system"))
   with ImplicitSender
   with WordSpecLike
   with Matchers
@@ -13,11 +13,12 @@ class DeviceSpec() extends TestKit(ActorSystem("iot-system"))
     TestKit.shutdownActorSystem(system)
   }
 
+  // Test Registration
   "reply to registration requests" in {
     val probe = TestProbe()
-    val deviceActor = system.actorOf(Device.props("group", "device"))
+    val deviceActor = system.actorOf(DeviceActor.props("group", "device"))
 
-    deviceActor.tell(DeviceManager.RequestTrackDevice("group", "device"), probe.ref)
+    deviceActor.tell(DeviceManager.RegisterDevice("group", "device"), probe.ref)
 
     probe.expectMsg(DeviceManager.DeviceRegistered)
     probe.lastSender should === (deviceActor)
@@ -25,12 +26,12 @@ class DeviceSpec() extends TestKit(ActorSystem("iot-system"))
 
   "ignore wrong registration requests" in {
     val probe = TestProbe()
-    val deviceActor = system.actorOf(Device.props("group", "device"))
+    val deviceActor = system.actorOf(DeviceActor.props("group", "device"))
 
-    deviceActor.tell(DeviceManager.RequestTrackDevice("wrongGroup", "device"), probe.ref)
+    deviceActor.tell(DeviceManager.RegisterDevice("wrongGroup", "device"), probe.ref)
     probe.expectNoMessage(500.milliseconds)
 
-    deviceActor.tell(DeviceManager.RequestTrackDevice("group", "Wrongdevice"), probe.ref)
+    deviceActor.tell(DeviceManager.RegisterDevice("group", "Wrongdevice"), probe.ref)
     probe.expectNoMessage(500.milliseconds)
   }
 }

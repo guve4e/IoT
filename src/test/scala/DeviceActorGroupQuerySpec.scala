@@ -3,7 +3,7 @@ import akka.testkit.{ImplicitSender, TestKit, TestProbe}
 import org.scalatest.{BeforeAndAfterAll, Matchers, WordSpecLike}
 import scala.concurrent.duration._
 
-class DeviceGroupQuerySpec() extends TestKit(ActorSystem("iot-system"))
+class DeviceActorGroupQuerySpec() extends TestKit(ActorSystem("iot-system"))
   with ImplicitSender
   with WordSpecLike
   with Matchers
@@ -11,7 +11,6 @@ class DeviceGroupQuerySpec() extends TestKit(ActorSystem("iot-system"))
 
   "return temperature value for working devices" in {
     val requester = TestProbe()
-
     val device1 = TestProbe()
     val device2 = TestProbe()
 
@@ -22,11 +21,11 @@ class DeviceGroupQuerySpec() extends TestKit(ActorSystem("iot-system"))
       timeout = 3.seconds
     ))
 
-    device1.expectMsg(Device.ReadTemperature(requestId = 0))
-    device2.expectMsg(Device.ReadTemperature(requestId = 0))
+    device1.expectMsg(DeviceActor.ReadTemperature(requestId = 0))
+    device2.expectMsg(DeviceActor.ReadTemperature(requestId = 0))
 
-    queryActor.tell(Device.RespondTemperature(requestId = 0, Some(1.0)), device1.ref)
-    queryActor.tell(Device.RespondTemperature(requestId = 0, Some(2.0)), device2.ref)
+    queryActor.tell(DeviceActor.TemperatureRead(requestId = 0, Some(1.0)), device1.ref)
+    queryActor.tell(DeviceActor.TemperatureRead(requestId = 0, Some(2.0)), device2.ref)
 
     requester.expectMsg(DeviceGroup.RespondAllTemperatures(
       requestId = 1,
@@ -39,7 +38,6 @@ class DeviceGroupQuerySpec() extends TestKit(ActorSystem("iot-system"))
 
   "return TemperatureNotAvailable for devices with no readings" in {
     val requester = TestProbe()
-
     val device1 = TestProbe()
     val device2 = TestProbe()
 
@@ -50,11 +48,11 @@ class DeviceGroupQuerySpec() extends TestKit(ActorSystem("iot-system"))
       timeout = 3.seconds
     ))
 
-    device1.expectMsg(Device.ReadTemperature(requestId = 0))
-    device2.expectMsg(Device.ReadTemperature(requestId = 0))
+    device1.expectMsg(DeviceActor.ReadTemperature(requestId = 0))
+    device2.expectMsg(DeviceActor.ReadTemperature(requestId = 0))
 
-    queryActor.tell(Device.RespondTemperature(requestId = 0, None), device1.ref)
-    queryActor.tell(Device.RespondTemperature(requestId = 0, Some(2.0)), device2.ref)
+    queryActor.tell(DeviceActor.TemperatureRead(requestId = 0, None), device1.ref)
+    queryActor.tell(DeviceActor.TemperatureRead(requestId = 0, Some(2.0)), device2.ref)
 
     requester.expectMsg(DeviceGroup.RespondAllTemperatures(
       requestId = 1,
@@ -78,10 +76,10 @@ class DeviceGroupQuerySpec() extends TestKit(ActorSystem("iot-system"))
       timeout = 3.seconds
     ))
 
-    device1.expectMsg(Device.ReadTemperature(requestId = 0))
-    device2.expectMsg(Device.ReadTemperature(requestId = 0))
+    device1.expectMsg(DeviceActor.ReadTemperature(requestId = 0))
+    device2.expectMsg(DeviceActor.ReadTemperature(requestId = 0))
 
-    queryActor.tell(Device.RespondTemperature(requestId = 0, Some(1.0)), device1.ref)
+    queryActor.tell(DeviceActor.TemperatureRead(requestId = 0, Some(1.0)), device1.ref)
     device2.ref ! PoisonPill
 
     requester.expectMsg(DeviceGroup.RespondAllTemperatures(
@@ -106,11 +104,11 @@ class DeviceGroupQuerySpec() extends TestKit(ActorSystem("iot-system"))
       timeout = 3.seconds
     ))
 
-    device1.expectMsg(Device.ReadTemperature(requestId = 0))
-    device2.expectMsg(Device.ReadTemperature(requestId = 0))
+    device1.expectMsg(DeviceActor.ReadTemperature(requestId = 0))
+    device2.expectMsg(DeviceActor.ReadTemperature(requestId = 0))
 
-    queryActor.tell(Device.RespondTemperature(requestId = 0, Some(1.0)), device1.ref)
-    queryActor.tell(Device.RespondTemperature(requestId = 0, Some(2.0)), device2.ref)
+    queryActor.tell(DeviceActor.TemperatureRead(requestId = 0, Some(1.0)), device1.ref)
+    queryActor.tell(DeviceActor.TemperatureRead(requestId = 0, Some(2.0)), device2.ref)
     device2.ref ! PoisonPill
 
     requester.expectMsg(DeviceGroup.RespondAllTemperatures(
@@ -135,10 +133,10 @@ class DeviceGroupQuerySpec() extends TestKit(ActorSystem("iot-system"))
       timeout = 1.second
     ))
 
-    device1.expectMsg(Device.ReadTemperature(requestId = 0))
-    device2.expectMsg(Device.ReadTemperature(requestId = 0))
+    device1.expectMsg(DeviceActor.ReadTemperature(requestId = 0))
+    device2.expectMsg(DeviceActor.ReadTemperature(requestId = 0))
 
-    queryActor.tell(Device.RespondTemperature(requestId = 0, Some(1.0)), device1.ref)
+    queryActor.tell(DeviceActor.TemperatureRead(requestId = 0, Some(1.0)), device1.ref)
 
     requester.expectMsg(DeviceGroup.RespondAllTemperatures(
       requestId = 1,
@@ -147,5 +145,30 @@ class DeviceGroupQuerySpec() extends TestKit(ActorSystem("iot-system"))
         "device2" -> DeviceGroup.DeviceTimedOut
       )
     ))
+  }
+
+  "foo" in {
+    val probe = TestProbe()
+    val tempSensor = system.actorOf(DeviceActor.props("sensors", "temp sensor"))
+    val pressureSensor = system.actorOf(DeviceActor.props("sensors", "pressure sensor"))
+
+    val officeSwitch = system.actorOf(DeviceActor.props("switches", "office_switch"))
+    val kitchenSwitch = system.actorOf(DeviceActor.props("switches", "kitchen_switch"))
+
+    tempSensor.tell(DeviceManager.RegisterDevice("sensors", "temp sensor"), probe.ref)
+    probe.expectMsg(DeviceManager.DeviceRegistered)
+    tempSensor.tell(DeviceActor.RecordTemperature(12 , 73.45), probe.ref)
+    probe.expectMsg(DeviceActor.TemperatureRecorded(12))
+
+    pressureSensor.tell(DeviceManager.RegisterDevice("sensors", "pressure sensor"), probe.ref)
+    probe.expectMsg(DeviceManager.DeviceRegistered)
+    pressureSensor.tell(DeviceActor.RecordTemperature(222 , 12.45), probe.ref)
+    probe.expectMsg(DeviceActor.TemperatureRecorded(222))
+
+    officeSwitch.tell(DeviceManager.RegisterDevice("switches", "office_switch"), probe.ref)
+    officeSwitch.tell(DeviceActor.RecordTemperature(222 , 12.45), probe.ref)
+
+
+
   }
 }
