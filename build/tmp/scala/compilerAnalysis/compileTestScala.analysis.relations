@@ -1,13 +1,23 @@
 products:
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceGroupSpec.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\test\DeviceGroupSpec.class
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceSpec.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\test\DeviceSpec.class
 binary dependencies:
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceGroupSpec.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.12\2.5.21\7df4cee798df7b5711da83d1407fec31591a0f09\akka-actor_2.12-2.5.21.jar
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceGroupSpec.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-testkit_2.12\2.5.21\4caa852b83360327d57860df8d351514f3009e2c\akka-testkit_2.12-2.5.21.jar
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceGroupSpec.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.12.8\36b234834d8f842cdde963c8591efae6cf413e3f\scala-library-2.12.8.jar
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceGroupSpec.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scalactic\scalactic_2.12\3.2.0-SNAP10\1f877bb26bc7ce3881fd7363932be4cc861bf829\scalactic_2.12-3.2.0-SNAP10.jar
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceGroupSpec.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scalatest\scalatest_2.12\3.2.0-SNAP10\4d9868f3d2b4c019d66b6c7fa22a52637d9df74f\scalatest_2.12-3.2.0-SNAP10.jar
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceGroupSpec.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceGroup$.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceGroupSpec.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceManager$.class
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceSpec.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.12\2.5.21\7df4cee798df7b5711da83d1407fec31591a0f09\akka-actor_2.12-2.5.21.jar
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceSpec.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-testkit_2.12\2.5.21\4caa852b83360327d57860df8d351514f3009e2c\akka-testkit_2.12-2.5.21.jar
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceSpec.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.12.8\36b234834d8f842cdde963c8591efae6cf413e3f\scala-library-2.12.8.jar
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceSpec.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scalactic\scalactic_2.12\3.2.0-SNAP10\1f877bb26bc7ce3881fd7363932be4cc861bf829\scalactic_2.12-3.2.0-SNAP10.jar
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceSpec.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scalatest\scalatest_2.12\3.2.0-SNAP10\4d9868f3d2b4c019d66b6c7fa22a52637d9df74f\scalatest_2.12-3.2.0-SNAP10.jar
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceSpec.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device$.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceSpec.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceManager$.class
 source dependencies:
 external dependencies:
 class names:
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceGroupSpec.scala -> DeviceGroupSpec
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\test\scala\DeviceSpec.scala -> DeviceSpec

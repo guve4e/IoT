@@ -1,6 +1,7 @@
 import akka.actor.ActorSystem
 import akka.testkit.{ImplicitSender, TestActors, TestKit, TestProbe}
 import org.scalatest.{BeforeAndAfterAll, Matchers, WordSpecLike}
+import scala.concurrent.duration._
 
 class DeviceSpec() extends TestKit(ActorSystem("iot-system"))
   with ImplicitSender
@@ -12,24 +13,24 @@ class DeviceSpec() extends TestKit(ActorSystem("iot-system"))
     TestKit.shutdownActorSystem(system)
   }
 
-  "reply with latest temperature reading" in {
+  "reply to registration requests" in {
     val probe = TestProbe()
     val deviceActor = system.actorOf(Device.props("group", "device"))
 
-    deviceActor.tell(Device.RecordTemperature(requestId = 1, 24.0), probe.ref)
-    probe.expectMsg(Device.TemperatureRecorded(requestId = 1))
+    deviceActor.tell(DeviceManager.RequestTrackDevice("group", "device"), probe.ref)
 
-    deviceActor.tell(Device.ReadTemperature(requestId = 2), probe.ref)
-    val response1 = probe.expectMsgType[Device.RespondTemperature]
-    response1.requestId should ===(2L)
-    response1.value should ===(Some(24.0))
+    probe.expectMsg(DeviceManager.DeviceRegistered)
+    probe.lastSender should === (deviceActor)
+  }
 
-    deviceActor.tell(Device.RecordTemperature(requestId = 3, 55.0), probe.ref)
-    probe.expectMsg(Device.TemperatureRecorded(requestId = 3))
+  "ignore wrong registration requests" in {
+    val probe = TestProbe()
+    val deviceActor = system.actorOf(Device.props("group", "device"))
 
-    deviceActor.tell(Device.ReadTemperature(requestId = 4), probe.ref)
-    val response2 = probe.expectMsgType[Device.RespondTemperature]
-    response2.requestId should ===(4L)
-    response2.value should ===(Some(55.0))
+    deviceActor.tell(DeviceManager.RequestTrackDevice("wrongGroup", "device"), probe.ref)
+    probe.expectNoMessage(500.milliseconds)
+
+    deviceActor.tell(DeviceManager.RequestTrackDevice("group", "Wrongdevice"), probe.ref)
+    probe.expectNoMessage(500.milliseconds)
   }
 }

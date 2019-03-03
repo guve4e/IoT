@@ -3,9 +3,26 @@ products:
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device$.class
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device$ReadTemperature$.class
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device$ReadTemperature.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device$RecordTemperature$.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device$RecordTemperature.class
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device$RespondTemperature$.class
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device$RespondTemperature.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device$TemperatureRecorded$.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device$TemperatureRecorded.class
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\Device.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceGroup$$anonfun$receive$1.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceGroup$.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceGroup$ReplyDeviceList$.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceGroup$ReplyDeviceList.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceGroup$RequestDeviceList$.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceGroup$RequestDeviceList.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceGroup.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceManager$$anonfun$receive$1.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceManager$.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceManager$DeviceRegistered$.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceManager$RequestTrackDevice$.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceManager$RequestTrackDevice.class
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\DeviceManager.class
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotApp.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\IotApp$.class
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotApp.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\IotApp.class
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotSupervisor.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\build\classes\scala\main\IotSupervisor$.class
@@ -13,11 +30,19 @@ products:
 binary dependencies:
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.12\2.5.21\7df4cee798df7b5711da83d1407fec31591a0f09\akka-actor_2.12-2.5.21.jar
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.12.8\36b234834d8f842cdde963c8591efae6cf413e3f\scala-library-2.12.8.jar
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.12\2.5.21\7df4cee798df7b5711da83d1407fec31591a0f09\akka-actor_2.12-2.5.21.jar
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.12.8\36b234834d8f842cdde963c8591efae6cf413e3f\scala-library-2.12.8.jar
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.12\2.5.21\7df4cee798df7b5711da83d1407fec31591a0f09\akka-actor_2.12-2.5.21.jar
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.12.8\36b234834d8f842cdde963c8591efae6cf413e3f\scala-library-2.12.8.jar
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotApp.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.12\2.5.21\7df4cee798df7b5711da83d1407fec31591a0f09\akka-actor_2.12-2.5.21.jar
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotApp.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.12.8\36b234834d8f842cdde963c8591efae6cf413e3f\scala-library-2.12.8.jar
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotSupervisor.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.12\2.5.21\7df4cee798df7b5711da83d1407fec31591a0f09\akka-actor_2.12-2.5.21.jar
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotSupervisor.scala -> C:\Users\guve4\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.12.8\36b234834d8f842cdde963c8591efae6cf413e3f\scala-library-2.12.8.jar
 source dependencies:
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotApp.scala -> C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotSupervisor.scala
 external dependencies:
 class names:
@@ -26,8 +51,25 @@ class names:
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> Device$$anonfun$receive$1
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> Device$ReadTemperature
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> Device$ReadTemperature$
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> Device$RecordTemperature
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> Device$RecordTemperature$
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> Device$RespondTemperature
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> Device$RespondTemperature$
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> Device$TemperatureRecorded
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\Device.scala -> Device$TemperatureRecorded$
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> DeviceGroup
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> DeviceGroup$
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> DeviceGroup$$anonfun$receive$1
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> DeviceGroup$ReplyDeviceList
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> DeviceGroup$ReplyDeviceList$
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> DeviceGroup$RequestDeviceList
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceGroup.scala -> DeviceGroup$RequestDeviceList$
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> DeviceManager
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> DeviceManager$
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> DeviceManager$$anonfun$receive$1
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> DeviceManager$DeviceRegistered$
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> DeviceManager$RequestTrackDevice
+   C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\DeviceManager.scala -> DeviceManager$RequestTrackDevice$
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotApp.scala -> IotApp
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotApp.scala -> IotApp$
    C:\Users\guve4\OneDrive\Learning-Akka\Learning-Akka-master\IoT\src\main\scala\IotSupervisor.scala -> IotSupervisor
