@@ -17,4 +17,6 @@ dependencies {
     testCompile group: 'org.scalatest', name: 'scalatest_2.12', version: '3.2.0-SNAP10'
     testCompile group: 'com.typesafe.akka', name: 'akka-testkit_2.12', version: '2.5.21'
     testCompile group: 'org.scalacheck', name: 'scalacheck_2.10', version: '1.11.3'
+    compile group: 'com.typesafe.akka', name: 'akka-http-spray-json_2.12', version: '10.1.7'
+    implementation 'org.codehaus.groovy:groovy-all:2.4.15'
 }
