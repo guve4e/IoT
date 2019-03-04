@@ -55,29 +55,29 @@ class DeviceActorGroupSpec() extends TestKit(ActorSystem("iot-system"))
 //
   // Test adding device actors and then sending messages
   // to update temperature
-  "be able to collect temperatures from all active devices" in {
-    val probe = TestProbe()
-    val groupActor = system.actorOf(DeviceGroup.props("group"))
-
-    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device1"), probe.ref)
-    probe.expectMsg(DeviceManager.DeviceRegistered)
-    val deviceActor1 = probe.lastSender
-
-    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device2"), probe.ref)
-    probe.expectMsg(DeviceManager.DeviceRegistered)
-    val deviceActor2 = probe.lastSender
-
-    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device3"), probe.ref)
-    probe.expectMsg(DeviceManager.DeviceRegistered)
-    val deviceActor3 = probe.lastSender
-
-    // Check that the device actors are working
-    deviceActor1.tell(DeviceActor.SendCommand(requestId = 0, "Some Command"), probe.ref)
-    probe.expectMsg(DeviceActor.CommandSent(requestId = 0))
-    deviceActor2.tell(DeviceActor.SendCommand(requestId = 1, "Some Other Command"), probe.ref)
-    probe.expectMsg(DeviceActor.CommandSent(requestId = 1))
-
-    groupActor.tell(DeviceGroup.RequestAllValues(requestId = 1), probe.ref)
+//  "be able to collect temperatures from all active devices" in {
+//    val probe = TestProbe()
+//    val groupActor = system.actorOf(DeviceGroup.props("group"))
+//
+//    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device1"), probe.ref)
+//    probe.expectMsg(DeviceManager.DeviceRegistered)
+//    val deviceActor1 = probe.lastSender
+//
+//    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device2"), probe.ref)
+//    probe.expectMsg(DeviceManager.DeviceRegistered)
+//    val deviceActor2 = probe.lastSender
+//
+//    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device3"), probe.ref)
+//    probe.expectMsg(DeviceManager.DeviceRegistered)
+//    val deviceActor3 = probe.lastSender
+//
+//    // Check that the device actors are working
+//    deviceActor1.tell(DeviceActor.SendCommand(requestId = 0, "Some Command"), probe.ref)
+//    probe.expectMsg(DeviceActor.CommandSent(requestId = 0))
+//    deviceActor2.tell(DeviceActor.SendCommand(requestId = 1, "Some Other Command"), probe.ref)
+//    probe.expectMsg(DeviceActor.CommandSent(requestId = 1))
+//
+//    groupActor.tell(DeviceGroup.RequestAllValues(requestId = 1), probe.ref)
 //    probe.expectMsg(
 //      DeviceGroup.RespondAllValues(
 //        requestId = 1,
@@ -86,5 +86,5 @@ class DeviceActorGroupSpec() extends TestKit(ActorSystem("iot-system"))
 //          "device2" -> DeviceGroup.ValuesNotAvailable,
 //          "device3" -> DeviceGroup.ValuesNotAvailable)
 //      ))
-  }
+//  }
 }
