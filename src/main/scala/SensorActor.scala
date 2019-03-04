@@ -4,10 +4,9 @@ import groovy.lang.{Binding, GroovyShell}
 class SensorActor {
 
   val shell = new GroovyShell()
-  val script = shell.parse(new File("src/main/scala/MyScript.groovy"))
+  val script = shell.parse(new File("src/main/scala/Main.groovy"))
 
-  script.invokeMethod("method", 12)
-  script.invokeMethod("foo", 12)
+  print(script.invokeMethod("get", 12))
 
 }
 
