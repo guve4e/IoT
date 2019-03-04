@@ -27,7 +27,7 @@ import akka.actor.{Actor, ActorLogging, ActorRef, Props, Terminated}
 object DeviceManager {
   def props(): Props = Props(new DeviceManager)
 
-  final case class RegisterDevice(groupId: String, deviceId: String)
+  final case class RegisterDevice[T](device: T, groupId: String, deviceId: String)
   case object DeviceRegistered
 }
 
@@ -41,7 +41,7 @@ class DeviceManager extends Actor with ActorLogging {
 
   override def receive: PartialFunction[Any, Unit] = {
 
-    case trackMsg @ RegisterDevice(groupId, _) =>
+    case trackMsg @ RegisterDevice(device, groupId, _) =>
       groupIdToActor.get(groupId) match {
         case Some(ref) =>
           ref forward trackMsg

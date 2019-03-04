@@ -30,34 +30,34 @@ class DeviceGroupQuery(
     context.system.scheduler.scheduleOnce(timeout, self, CollectionTimeout)
 
   override def preStart(): Unit = {
+    // Before start iterate trough the
+    // map with actors injected and
+    // start watching each actor
     actorToDeviceIds.keysIterator.foreach {
       deviceActor =>
         context.watch(deviceActor)
-        deviceActor ! DeviceActor.ReadTemperature(0)
+        deviceActor ! DeviceActor.ReadValues(0)
     }
   }
 
   override def postStop(): Unit = {
+    // Before Stop, cancel the timer
     queryTimeoutTimer.cancel()
   }
 
-  //#query-outline
-  //#query-state
   override def receive: Receive =
-    waitingForReplies(
-      Map.empty,
-      actorToDeviceIds.keySet
-    )
+    waitingForReplies(Map.empty, actorToDeviceIds.keySet)
 
   def waitingForReplies(
-                         repliesSoFar: Map[String, DeviceGroup.TemperatureReading],
+                         repliesSoFar: Map[String, DeviceGroup.ValuesReading],
                          stillWaiting: Set[ActorRef]
-                       ): Receive = {
-    case DeviceActor.TemperatureRead(0, valueOption) =>
+                       ): Receive =
+  {
+    case DeviceActor.ValuesRead(0, valueOption) =>
       val deviceActor = sender()
       val reading = valueOption match {
-        case Some(value) => DeviceGroup.Temperature(value)
-        case None        => DeviceGroup.TemperatureNotAvailable
+        case Some(value) => DeviceGroup.Values(Nil)
+        case None        => DeviceGroup.ValuesNotAvailable
       }
       receivedResponse(deviceActor, reading, stillWaiting, repliesSoFar)
 
@@ -70,7 +70,7 @@ class DeviceGroupQuery(
           val deviceId = actorToDeviceIds(deviceActor)
           deviceId -> DeviceGroup.DeviceTimedOut
         }
-      requester ! DeviceGroup.RespondAllTemperatures(requestId, repliesSoFar ++ timedOutReplies)
+      requester ! DeviceGroup.RespondAllValues(requestId, repliesSoFar ++ timedOutReplies)
       context.stop(self)
   }
   //#query-state
@@ -78,9 +78,9 @@ class DeviceGroupQuery(
   //#query-collect-reply
   def receivedResponse(
                         deviceActor:  ActorRef,
-                        reading:      DeviceGroup.TemperatureReading,
+                        reading:      DeviceGroup.ValuesReading,
                         stillWaiting: Set[ActorRef],
-                        repliesSoFar: Map[String, DeviceGroup.TemperatureReading]
+                        repliesSoFar: Map[String, DeviceGroup.ValuesReading]
                       ): Unit = {
     context.unwatch(deviceActor)
     val deviceId = actorToDeviceIds(deviceActor)
@@ -88,7 +88,7 @@ class DeviceGroupQuery(
 
     val newRepliesSoFar = repliesSoFar + (deviceId -> reading)
     if (newStillWaiting.isEmpty) {
-      requester ! DeviceGroup.RespondAllTemperatures(requestId, newRepliesSoFar)
+      requester ! DeviceGroup.RespondAllValues(requestId, newRepliesSoFar)
       context.stop(self)
     } else {
       context.become(waitingForReplies(newRepliesSoFar, newStillWaiting))

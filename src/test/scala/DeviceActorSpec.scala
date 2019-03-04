@@ -13,12 +13,14 @@ class DeviceActorSpec() extends TestKit(ActorSystem("iot-system"))
     TestKit.shutdownActorSystem(system)
   }
 
+  class TempSensor(value: Double)
+
   // Test Registration
   "reply to registration requests" in {
     val probe = TestProbe()
-    val deviceActor = system.actorOf(DeviceActor.props("group", "device"))
+    val deviceActor = system.actorOf(DeviceActor.props(new TempSensor(68.45),"group", "device"))
 
-    deviceActor.tell(DeviceManager.RegisterDevice("group", "device"), probe.ref)
+    deviceActor.tell(DeviceManager.RegisterDevice(new TempSensor(68.45), "group", "device"), probe.ref)
 
     probe.expectMsg(DeviceManager.DeviceRegistered)
     probe.lastSender should === (deviceActor)
@@ -26,12 +28,12 @@ class DeviceActorSpec() extends TestKit(ActorSystem("iot-system"))
 
   "ignore wrong registration requests" in {
     val probe = TestProbe()
-    val deviceActor = system.actorOf(DeviceActor.props("group", "device"))
+    val deviceActor = system.actorOf(DeviceActor.props(new TempSensor(68.45),"group", "device"))
 
-    deviceActor.tell(DeviceManager.RegisterDevice("wrongGroup", "device"), probe.ref)
+    deviceActor.tell(DeviceManager.RegisterDevice(new TempSensor(68.45), "wrongGroup", "device"), probe.ref)
     probe.expectNoMessage(500.milliseconds)
 
-    deviceActor.tell(DeviceManager.RegisterDevice("group", "Wrongdevice"), probe.ref)
+    deviceActor.tell(DeviceManager.RegisterDevice(new TempSensor(68.45), "group", "Wrongdevice"), probe.ref)
     probe.expectNoMessage(500.milliseconds)
   }
 }

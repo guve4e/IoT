@@ -8,16 +8,18 @@ class DeviceActorGroupSpec() extends TestKit(ActorSystem("iot-system"))
   with Matchers
   with BeforeAndAfterAll {
 
+  class WaterMeter(value: Double)
+
   // Test Registering devices and
   // listing them
   "be able to list active devices" in {
     val probe = TestProbe()
     val groupActor = system.actorOf(DeviceGroup.props("group"))
 
-    groupActor.tell(DeviceManager.RegisterDevice("group", "device1"), probe.ref)
+    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device1"), probe.ref)
     probe.expectMsg(DeviceManager.DeviceRegistered)
 
-    groupActor.tell(DeviceManager.RegisterDevice("group", "device2"), probe.ref)
+    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device2"), probe.ref)
     probe.expectMsg(DeviceManager.DeviceRegistered)
 
     groupActor.tell(DeviceGroup.RequestDeviceList(requestId = 0), probe.ref)
@@ -28,11 +30,11 @@ class DeviceActorGroupSpec() extends TestKit(ActorSystem("iot-system"))
     val probe = TestProbe()
     val groupActor = system.actorOf(DeviceGroup.props("group"))
 
-    groupActor.tell(DeviceManager.RegisterDevice("group", "device1"), probe.ref)
+    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device1"), probe.ref)
     probe.expectMsg(DeviceManager.DeviceRegistered)
     val toShutDown = probe.lastSender // save reference to this actor so we can shut it down
 
-    groupActor.tell(DeviceManager.RegisterDevice("group", "device2"), probe.ref)
+    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device2"), probe.ref)
     probe.expectMsg(DeviceManager.DeviceRegistered)
 
     groupActor.tell(DeviceGroup.RequestDeviceList(requestId = 0), probe.ref)
@@ -50,40 +52,39 @@ class DeviceActorGroupSpec() extends TestKit(ActorSystem("iot-system"))
       probe.expectMsg(DeviceGroup.ReplyDeviceList(requestId = 1, Set("device2")))
     }
   }
-
+//
   // Test adding device actors and then sending messages
   // to update temperature
   "be able to collect temperatures from all active devices" in {
     val probe = TestProbe()
     val groupActor = system.actorOf(DeviceGroup.props("group"))
 
-    groupActor.tell(DeviceManager.RegisterDevice("group", "device1"), probe.ref)
+    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device1"), probe.ref)
     probe.expectMsg(DeviceManager.DeviceRegistered)
     val deviceActor1 = probe.lastSender
 
-    groupActor.tell(DeviceManager.RegisterDevice("group", "device2"), probe.ref)
+    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device2"), probe.ref)
     probe.expectMsg(DeviceManager.DeviceRegistered)
     val deviceActor2 = probe.lastSender
 
-    groupActor.tell(DeviceManager.RegisterDevice("group", "device3"), probe.ref)
+    groupActor.tell(DeviceManager.RegisterDevice(new WaterMeter(12.45), "group", "device3"), probe.ref)
     probe.expectMsg(DeviceManager.DeviceRegistered)
     val deviceActor3 = probe.lastSender
 
     // Check that the device actors are working
-    deviceActor1.tell(DeviceActor.RecordTemperature(requestId = 0, 1.0), probe.ref)
-    probe.expectMsg(DeviceActor.TemperatureRecorded(requestId = 0))
-    deviceActor2.tell(DeviceActor.RecordTemperature(requestId = 1, 2.0), probe.ref)
-    probe.expectMsg(DeviceActor.TemperatureRecorded(requestId = 1))
-    // No temperature for device3
+    deviceActor1.tell(DeviceActor.SendCommand(requestId = 0, "Some Command"), probe.ref)
+    probe.expectMsg(DeviceActor.CommandSent(requestId = 0))
+    deviceActor2.tell(DeviceActor.SendCommand(requestId = 1, "Some Other Command"), probe.ref)
+    probe.expectMsg(DeviceActor.CommandSent(requestId = 1))
 
-    groupActor.tell(DeviceGroup.RequestAllTemperatures(requestId = 1), probe.ref)
-    probe.expectMsg(
-      DeviceGroup.RespondAllTemperatures(
-        requestId = 1,
-        temperatures = Map(
-          "device1" -> DeviceGroup.Temperature(1.0),
-          "device2" -> DeviceGroup.Temperature(2.0),
-          "device3" -> DeviceGroup.TemperatureNotAvailable)
-      ))
+    groupActor.tell(DeviceGroup.RequestAllValues(requestId = 1), probe.ref)
+//    probe.expectMsg(
+//      DeviceGroup.RespondAllValues(
+//        requestId = 1,
+//        values = Map(
+//          "device1" -> DeviceGroup.ValuesNotAvailable,
+//          "device2" -> DeviceGroup.ValuesNotAvailable,
+//          "device3" -> DeviceGroup.ValuesNotAvailable)
+//      ))
   }
 }
